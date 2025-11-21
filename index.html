@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Valorant - Video Background Hero</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CDN for quick development (not for production) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Optional: customize Tailwind default fonts/colors quickly
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#ff6b6b',
+            'accent-dark': '#e24f5a'
+          },
+          fontFamily: {
+            mont: ['Montserrat', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="min-h-screen flex flex-col font-mont">
+    <header class="relative z-20 bg-black/60 backdrop-blur-sm flex items-center justify-between px-10 py-4">
+      <div class="text-white font-extrabold tracking-wider">RIOT GAMES</div>
+      <nav class="hidden md:flex items-center gap-6 text-gray-200 text-sm">
+        <div>Thông tin trò chơi</div>
+        <div>Truyền thông</div>
+        <div>Tin tức</div>
+        <div>Hỗ trợ</div>
+        <div class="ml-4 bg-accent text-white px-3 py-1 rounded-md font-semibold">Chơi ngay</div>
+      </nav>
+    </header>
+
+    <main class="relative flex-1">
+      <!-- Background video: replace `assets/hero.mp4` with your video file. Keep `muted` and `playsinline` for autoplay on mobile. -->
+      <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline poster="assets/hero.jpg">
+        <source src="assets/hero.mp4" type="video/mp4">
+      </video>
+
+      <!-- Overlay gradient -->
+      <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-[#04141d]/90"></div>
+
+      <div class="relative z-30 min-h-[72vh] flex items-center justify-center px-6">
+        <div class="text-center max-w-3xl">
+          <h1 class="text-white font-extrabold tracking-widest text-5xl md:text-7xl">VALORANT</h1>
+          <p class="mt-6 text-white font-extrabold uppercase tracking-wider text-sm md:text-lg">Valorant — tựa game bắn súng chiến thuật 5v5 với sự góp mặt của những đặc vụ cùng loạt kỹ năng riêng biệt</p>
+          <div class="mt-8">
+            <a href="#" class="inline-block bg-gradient-to-b from-accent to-accent-dark text-white px-6 py-3 rounded-md shadow-lg font-semibold">Chơi miễn phí</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- News / Latest -->
+    <section class="py-16 bg-[#f3efeb]">
+      <div class="container mx-auto px-6">
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-[#0e1316]">TIN TỨC MỚI NHẤT</h2>
+          <a href="#" class="text-sm text-[#0e1316] flex items-center gap-2">ĐẾN TRANG TIN TỨC <span class="text-accent">↗</span></a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <article class="bg-[#f3efeb]">
+            <div class="relative bg-gray-800 h-48 md:h-56 rounded-sm overflow-hidden">
+              <img src="assets/news1.jpg" alt="news 1" class="w-full h-full object-cover">
+            </div>
+            <div class="mt-4">
+              <div class="text-sm text-accent font-semibold">THỂ THAO ĐIỆN TỬ | 18/11/2025</div>
+              <h3 class="mt-2 text-xl font-bold text-[#0e1316]">Riot Games Chấm Dứt Quan Hệ Đối Tác VCT Pacific Của TALON Esports</h3>
+              <p class="mt-2 text-gray-600">Cập nhật đối với VCT Pacific</p>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="bg-[#f3efeb]">
+            <div class="relative bg-gray-800 h-48 md:h-56 rounded-sm overflow-hidden">
+              <img src="assets/news2.jpg" alt="news 2" class="w-full h-full object-cover">
+            </div>
+            <div class="mt-4">
+              <div class="text-sm text-accent font-semibold">THỂ THAO ĐIỆN TỬ | 7/11/2025</div>
+              <h3 class="mt-2 text-xl font-bold text-[#0e1316]">Game Changers Championship 2025: Thể Thức Thi Đấu</h3>
+              <p class="mt-2 text-gray-600">Bùng nổ không ngừng nghỉ. Hãy nắm rõ thể thức và cấu trúc giải đấu.</p>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="bg-[#f3efeb]">
+            <div class="relative bg-gray-800 h-48 md:h-56 rounded-sm overflow-hidden">
+              <img src="assets/news3.jpg" alt="news 3" class="w-full h-full object-cover">
+            </div>
+            <div class="mt-4">
+              <div class="text-sm text-accent font-semibold">CẬP NHẬT TRÒ CHƠI | 28/10/2025</div>
+              <h3 class="mt-2 text-xl font-bold text-[#0e1316]">VALORANT - Phiên Bản 11.09</h3>
+              <p class="mt-2 text-gray-600">MFA cho các tài khoản chia sẻ, cập nhật chất lượng trải nghiệm và sửa lỗi.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Large Promo block (character highlight) -->
+    <section class="py-20 bg-[#07121a]">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="order-2 md:order-1">
+            <h3 class="text-6xl md:text-7xl font-extrabold text-white leading-tight">ĐẶC VỤ MỚI: VETO</h3>
+            <p class="mt-4 text-white/80 max-w-md">Vô hiệu hóa chiến trường cùng Veto & để kỹ năng đấu súng của bạn được tỏa sáng.</p>
+            <a href="#" class="mt-8 inline-block bg-accent text-white px-6 py-3 rounded-md font-semibold">XEM NGAY</a>
+          </div>
+          <div class="order-1 md:order-2">
+            <img src="assets/agent-veto.jpg" alt="Veto" class="w-full rounded-sm shadow-xl">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / We are Valorant -->
+    <section class="py-20 bg-[#f3efeb]">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-6xl font-extrabold text-[#0e1316]">CHÚNG TÔI<br/>LÀ VALORANT</h2>
+            <h4 class="mt-6 text-sm font-semibold text-[#0e1316]">THÁCH THỨC MỌI GIỚI HẠN</h4>
+            <p class="mt-4 text-gray-700 max-w-xl">Mang phong cách và trải nghiệm cá nhân tới đấu trường cạnh tranh toàn cầu. Sử dụng kỹ năng đấu súng cùng với lối tư duy chiến thuật sắc bén với hai phe tấn công và phòng thủ, thành bại được định đoạt chỉ trong 13 vòng đấu...</p>
+            <a href="#" class="mt-8 inline-block bg-accent text-white px-6 py-3 rounded-md font-semibold">TÌM HIỂU TRÒ CHƠI</a>
+          </div>
+          <div>
+            <img src="assets/about-play.jpg" alt="about" class="w-full rounded-sm shadow-lg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Red promo section (agents callout) -->
+    <section class="py-20 bg-accent text-white">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <img src="assets/agents-hero.png" alt="agents" class="w-full object-contain">
+          </div>
+          <div class="pr-6">
+            <h2 class="text-6xl font-extrabold">ĐẶC VỤ CỦA BẠN</h2>
+            <p class="mt-4 text-white/90 max-w-lg">Sáng tạo là vũ khí tối thượng của bạn. Ngoài việc trang bị súng đạn, hãy chọn riêng mình một Đặc Vụ có kỹ năng phù hợp với lối chơi của bạn để giúp bạn tỏa sáng.</p>
+            <a href="#" class="mt-8 inline-block bg-[#0e1316] text-white px-6 py-3 rounded-md font-semibold">KHÁM PHÁ CÁC ĐẶC VỤ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Maps section -->
+    <section class="py-20 bg-[#f3efeb]">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-5xl font-extrabold text-[#0e1316]">BẢN ĐỒ CỦA BẠN</h3>
+            <h4 class="mt-4 text-sm font-semibold text-[#0e1316]">CHIẾN ĐẤU KHẮP THẾ GIỚI</h4>
+            <p class="mt-4 text-gray-700 max-w-lg">Mỗi bản đồ đều là một sân chơi để bạn thỏa sức thể hiện tư duy sáng tạo của mình. Được xây dựng với mục đích phát triển chiến lược đội nhóm...</p>
+            <a href="#" class="mt-8 inline-block bg-accent text-white px-6 py-3 rounded-md font-semibold">KHÁM PHÁ CÁC BẢN ĐỒ</a>
+          </div>
+          <div>
+            <img src="assets/map.jpg" alt="map" class="w-full rounded-sm shadow-md">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0c0c0c] text-gray-300 py-12">
+      <div class="container mx-auto px-6 text-center">
+        <div class="mb-6 flex justify-center gap-4">
+          <div class="w-10 h-10 bg-gray-800 rounded-full"></div>
+          <div class="w-10 h-10 bg-gray-800 rounded-full"></div>
+          <div class="w-10 h-10 bg-gray-800 rounded-full"></div>
+        </div>
+        <p class="text-sm max-w-2xl mx-auto">© năm 2020 - 2025 bởi Riot Games, Inc. RIOT GAMES, VALORANT và mọi logo liên quan là nhãn hiệu. Công Ty Cổ Phần VNG. Địa chỉ ...</p>
+        <div class="mt-8">
+          <a class="inline-block bg-white text-black px-4 py-2 rounded-sm font-bold">18+</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
